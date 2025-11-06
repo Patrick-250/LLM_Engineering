@@ -15,11 +15,11 @@ else:
 
 openai=OpenAI() #by default this looks for openai api key... see line 22-30 in notes.txt to see how to use other frontier models...
 
-message="tell me a joke"
+message=input("enter your message or something you need help with......     ")
 messages=[{"role":"user","content":message}]
 
 response=openai.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model="gpt-5-nano",
     messages=messages,
 )
 

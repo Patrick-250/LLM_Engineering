@@ -35,3 +35,19 @@ hold on lets step back a lil, basically, they are 3 types of flavors in LLMs(my 
  -Reasoning... started with prompt engineering(e.g telling model ,hey think step by step before answering) and providers really improved on that
            
           N.b: really all frontier models are hybrid of chat and reasoning... they just have all lol
+
+                 ######transformers architecture####
+
+this is literary the architecture behind GPT and other LLMs.
+-google enginners released the paper "Attention is all you need" in 2017 which led to this architecture.
+we used to work with traditional statistical model, 
+
+Transformers process sequences like sentences using attention instead of recurrence, allowing them to see all words at once and decide which ones matter most.
+Each layer combines multi-head self-attention to find relationships between words and feed-forward networks to process information further.
+By stacking these layers, transformers learn deep patterns in data, forming the foundation of models like GPT
+
+
+
+
+
+
