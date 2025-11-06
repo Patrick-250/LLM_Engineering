@@ -33,7 +33,8 @@ messages = [
 
 response = openai.chat.completions.create(
     model="gpt-5-nano",  
-    messages=messages
+    messages=messages,
+    
 )
 
 print(response.choices[0].message.content)

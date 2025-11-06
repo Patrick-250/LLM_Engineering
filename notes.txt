@@ -46,8 +46,16 @@ Transformers process sequences like sentences using attention instead of recurre
 Each layer combines multi-head self-attention to find relationships between words and feed-forward networks to process information further.
 By stacking these layers, transformers learn deep patterns in data, forming the foundation of models like GPT
 
+                       #####Langchain vs LiteLLM as frameworks########
+
+                               ***langchain***
+used to do from Langchain_openai import ChatOpenai then llm=ChatOpenai(model="gpt-5-nano) then response=llm.invoke("prompt")
+but as of 2025 nov, current v1 version do 1.from langchain.chat_models import init_chat_model .. 
+in current version init_chat_model class handles all the providers and u just specify the model and provider like 2.llm=init_chat_model(model="gpt-5-nano",model_provider="OPENAI")
 
 
+                              ***LiteLLM***
+ with litellm we do 1.from  litellm import completion 2. response=complettion(model="provider/modelname",messages=messages)                           
 
-
-
+                           
+i.e just learnt, i cant pass a string as messages="tell me a joke" needs to be a json array ; like messages=[{"role":"user","content":"tell me a joke about project managers"}]
