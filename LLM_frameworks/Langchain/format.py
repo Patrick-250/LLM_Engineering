@@ -7,7 +7,11 @@ load_dotenv()    #funny enough that langchain just picks the loaded env... but w
 
 
 
-llm=init_chat_model(model="gpt-5-nano",model_provider="OPENAI")
+llm=init_chat_model(model="gpt-5-nano",model_provider="OPENAI", )
 
-response=llm.invoke("tell me a joke about project managers")
-print(response)
+response=llm.stream("write me a poem about software engineers")
+for chunk in response:
+    if chunk.content:
+        print(chunk.content,end="",flush=True)
+
+
