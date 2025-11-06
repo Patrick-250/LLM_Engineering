@@ -1,0 +1,29 @@
+
+                                           ________LLM Engineering___________
+
+******Large Language Models*****
+
+
+open source vs closed source
+
+-open source: GPT-OSS(BY OpenAI),LLama(Meta),Mixtral,QWeen by alibaba, gemma by google,phi from microsoft,Deepseek(took industry when it came out lol..cz it was just made with a fraction of cost compared to what was spent on GPT)
+
+-closed  source frontier models include GPT(OpenAI),Gemini(Google),Claude(Anthropic),Grok(X.Ai)
+
+
+ ****ways to use LLMs******
+
+1.using their chatInterfaces(for example chatgpt,claude sonit 4.5)
+2.by using cloud APIs; LLM API... cloud apis include amazon bedrock,google vertex ai,azure ML
+3.direct inference  with huggingface, transformers library, with ollama(ollama is just a product packaged in c++; efficient  to run open models locally)  to run locally..
+ 
+            #####chat completions apis####
+
+first started by openai but seems like other providers adapted to this either.. 
+   -for openai.... we do openai=OpenAI() DEFAULTS TO openai
+   -for Gemini, we do gemini = OpenAI(base_url="https://generativelanguage.googleapis.com/v1beta/openai/", api_key="AIz....") and so on for other providers..
+   -for ollama(if u wanna run open source models locally) we do ollama=OPENAI(base_url="http://localhost:11434/V1,api_key="ollama") #KEY CAN BE ANYTHING.. SINCE ITS FREE(OPEN SOURCE)
+   -for gemini(or other providers). even if we using OPENAI(), this is just a python client libary and we not really doing nothing with openai..                                            
+  getting response stays the same... ie: see line 17-24 in format.py 
+
+
