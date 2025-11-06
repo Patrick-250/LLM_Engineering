@@ -27,3 +27,11 @@ first started by openai but seems like other providers adapted to this either..
   getting response stays the same... ie: see line 17-24 in format.py 
 
 
+                   ####Base,chat,and Resoning models#######
+
+hold on lets step back a lil, basically, they are 3 types of flavors in LLMs(my saying) based on tasks they are better at doing i guess
+ -Base ,just take info and predict the next in sequence... in phones like when typing and it showsauto sugegstions lols..
+ -Chat, uses system prompt and user prompt to force models answer question...chatgpt.... really came from base when openai improved base gpt3 for example
+ -Reasoning... started with prompt engineering(e.g telling model ,hey think step by step before answering) and providers really improved on that
+           
+          N.b: really all frontier models are hybrid of chat and reasoning... they just have all lol
