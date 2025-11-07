@@ -6,6 +6,9 @@ import gradio as gr
 
 load_dotenv()
 
+
+username = os.getenv("USERNAME")
+password = os.getenv("PASSWORD")
 def generate_lyrics(description: str) -> str:
     system_message = f"""
     You are a professional music lyricist AI skilled in writing songs across multiple genres and moods.
@@ -50,4 +53,4 @@ textarea = gr.TextArea(label="Generated Lyrics")
 
 gr.Interface(fn=generate_lyrics, inputs=textbox, outputs=textarea, 
              title="Song Generator",
-             description="Type a theme or style and get original song lyrics.").launch()
+             description="Type a theme or style and get original song lyrics.").launch(share=True,auth=(username,password))
