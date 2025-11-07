@@ -29,7 +29,7 @@ def generate_lyrics(description: str) -> str:
     Maintain a clear song structure that works for professional songwriting and performance.
 
     Output Format:
-
+    [Title]
     [Intro]  
     [Chorus]  
     [Verse 1]  
@@ -48,9 +48,9 @@ def generate_lyrics(description: str) -> str:
     response = llm.invoke(messages)
     return response.content
 
-textbox = gr.Textbox(label="Enter your song's theme/style")
-textarea = gr.TextArea(label="Generated Lyrics")
+textbox = gr.Textbox(info="enter your song's theme/style")
+textarea = gr.TextArea(label="Generated Lyrics",info="generated lyrics will apeare here")
 
 gr.Interface(fn=generate_lyrics, inputs=textbox, outputs=textarea, 
              title="Song Generator",
-             description="Type a theme or style and get original song lyrics.").launch(share=True,auth=(username,password))
+            ).launch(share=True,auth=(username,password))
