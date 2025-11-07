@@ -59,3 +59,8 @@ in current version init_chat_model class handles all the providers and u just sp
 
                            
 i.e just learnt, i cant pass a string as messages="tell me a joke" needs to be a json array ; like messages=[{"role":"user","content":"tell me a joke about project managers"}]
+
+        
+        ####Gradio#####
+gradio is used to build front end uis in machine learning field( for demos and blue prints before moving to custom reacts or angualars etc).
+
